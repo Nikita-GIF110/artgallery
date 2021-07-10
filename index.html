@@ -125,7 +125,7 @@
         <!--news_content-->
         <div class="news_modal" id="popup1" data-modal_window="modal-1">
           <div class="news_modal_window" id="myModal">
-            <div class="news_modal_window_close">&times;</div>
+            <div class="news_modal_window_close"><img src="img/icon/closeButton.svg" alt=""></div>
             <div class="news_modal_window_img"><img src="img/news1.jpg" alt=""></div>
             <div class="news_modal_window_content">
               <h4>Lorem, ipsum dolor.</h4>
@@ -134,21 +134,25 @@
           </div>
         </div>
         <!--news_modal-->
-         <div class="news_modal" id="popup2" data-modal_window="modal-2">
+         <div class="news_modal" id="popup1" data-modal_window="modal-2">
           <div class="news_modal_window" id="myModal">
-            <div class="news_modal_window_close">&times;</div>
-            <div class="news_modal_window_img"></div>
-            <div class="news_modal_window_title">заголовок модального окна2</div>
-            <div class="news_modal_window_description">описание модального окна</div>
+            <div class="news_modal_window_close"><img src="img/icon/closeButton.svg" alt=""></div>
+            <div class="news_modal_window_img"><img src="img/news2.jpg" alt=""></div>
+            <div class="news_modal_window_content">
+              <h4>Lorem, ipsum dolor.</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus veniam dolorum voluptates eius facilis asperiores harum. Nisi porro culpa in neque iusto repellat ad illo maxime, aspernatur, rerum eum error.</p>
+            </div>
           </div>
         </div>
         <!--news_modal-->
-         <div class="news_modal" id="popup3" data-modal_window="modal-3">
+         <div class="news_modal" id="popup1" data-modal_window="modal-3">
           <div class="news_modal_window" id="myModal">
-            <div class="news_modal_window_close">&times;</div>
-            <div class="news_modal_window_img"></div>
-            <div class="news_modal_window_title">заголовок модального окна3</div>
-            <div class="news_modal_window_description">описание модального окна</div>
+            <div class="news_modal_window_close"><img src="img/icon/closeButton.svg" alt=""></div>
+            <div class="news_modal_window_img"><img src="img/news3.jpg" alt=""></div>
+            <div class="news_modal_window_content">
+              <h4>Lorem, ipsum dolor.</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus veniam dolorum voluptates eius facilis asperiores harum. Nisi porro culpa in neque iusto repellat ad illo maxime, aspernatur, rerum eum error.</p>
+            </div>
           </div>
         </div>
         <!--news_modal-->
@@ -209,16 +213,31 @@
         <p class="article_reserve_subTitle">Оставьте заявку и наш менеджер свяжется с вами<br />для уточнения деталей брони</p>
         <img class="article_reserve_img" src="img/reserve.png" alt="">
         <div class="article_reserve_content">
-          <form class="article_reserve_content_form">
+          <form action="#" class="article_reserve_content_form">
             <div class="wrapper-input">
-              <input type="text" placeholder="Имя">
-              <input type="tel" placeholder="Телефон">
-              <input type="text" placeholder="Количество гостей">
-              <input type="text">
-              <input type="text">
-              <input class="input-bottom" type="text" placeholder="Доп. информация">
-              <button type="submit">ЗАБРОНИРОВАТЬ</button>
+              <div class="event">
+                <input type="text" placeholder="Имя">
+              </div>
+              <div class="event">
+                <input type="tel" placeholder="Телефон">
+              </div>
+              <div class="event">
+                <input type="text" placeholder="Количество гостей">
+              </div>
+              <div class="event" date="date">
+                <input type="text" placeholder="Дата" date="date">
+              </div>
+              <div class="event" date="time">
+                <input type="text" placeholder="Время" date="time">
+              </div>
+              <div class="event">
+                <input class="input-bottom" type="text" placeholder="Доп. информация">
+              </div>
+              <div class="event">
+                <button type="submit">ЗАБРОНИРОВАТЬ</button>
+              </div>
             </div>
+            <!--wrapper-input-->
             <div class="wrapper-checkbox">
               <div class="wrap-custom-checkbox">
                 <input id="politic-checkbox" type="checkbox">
@@ -243,11 +262,11 @@
           <p class="article_map_content_adress">3-я Советская, д.34</p>
           <p class="article_map_content_email">@pikspb.ru</p>
           <div class="article_map_content_icon">
-            <a class="article_map_content_icon_inst" href="#">
-              <img src="img/icon/instagram.svg">
+            <a href="#">
+              <img src="img/icon/instagram.svg" class="article_map_content_icon_instagram social">
             </a>
             <a href="#">
-              <img src="img/icon/facebook 2.svg">
+              <img src="img/icon/facebook 2.svg" class="article_map_content_icon_facebook social">
             </a>
           </div>
           <!--article_map_content_icon-->

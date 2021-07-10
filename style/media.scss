@@ -1,87 +1,4 @@
 @media screen and (min-width: 1921px) {
-  .main_top {
-    margin: 45px 150px;
-  }
-  .menu_btn {
-    right: 50px;
-    top: 50px;
-  }
-  .menu_btn span::before {
-    top: -7px;
-  }
-  .menu_btn span::after {
-    bottom: -7px;
-  }
-  .menu {
-    background-color: #212121;
-    width: 20%;
-    padding: 50px;
-  }
-  .menu_logo {
-    margin-bottom: 50px;
-  }
-  .menu_social {
-    margin-top: 30px;
-  }
-  .article_wrap {
-    padding: 0 15px;
-  }
-  .article_wrap_content_imgs {
-    width: 50%;
-    text-align: right;
-  }
-  .article_wrap_content_imgs_group {
-    max-height: 100%;
-    max-width: 100%;
-  }
-  .article_wrap_content_description {
-    width: 50%;
-    padding-left: 20px;
-  }
-  .article_wrap_content_description p {
-    max-width: 600px;
-  }
-  //animations
-  .article-active .article_wrap_content_imgs {
-    margin-right: 0;
-  }
-  .article-active .article_wrap_content_imgs_group {
-    transform: scale(0.8);
-    transform-origin: center;
-  }
-  //animation
-  .article_wrap_content_card {
-    margin: 0 15px 0 15px;
-    width: calc(302px + 100 * (100vw / 1920));
-  }
-  .wrapper-input {
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-  .wrapper-input input {
-    margin-right: 8px;
-  }
-  .wrapper-checkbox {
-    margin-top: 35px;
-  }
-  .wrap-custom-checkbox {
-    margin-right: 15px;
-  }
-  .article_map {
-    min-height: 580px;
-  }
-  .article_map_content {
-    top: 50%;
-    left: 25%;
-    margin-top: -175px;
-    margin-left: -175px;
-  }
-  .footer_wrap {
-    width: 80%;
-    margin-left: 20%;
-  }
-}
-@media screen and (max-width: 1920px) {
   .menu_btn {
     right: 50px;
     top: 50px;
@@ -101,10 +18,13 @@
     padding: 50px;
   }
   .menu_logo {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+  }
+  .menu_navigation {
+    margin-bottom: 40px;
   }
   .menu_social {
-    margin-top: 30px;
+    margin-top: 70px;
   }
   .menu_navigation_list_link a {
     font-size: calc(14px + 6 * (100vw / 1920));
@@ -175,12 +95,146 @@
     margin: 0 15px 0 15px;
     width: calc(302px + 100 * (100vw / 1920));
   }
+  .article_wrap_content_card_icon {
+    top: 50%;
+    margin-top: -30px;
+  }
   .wrapper-input {
     flex-wrap: nowrap;
     justify-content: center;
   }
   .wrapper-input input {
     margin-right: 8px;
+    font-size: 14px;
+  }
+  .wrapper-checkbox {
+    margin-top: 35px;
+  }
+  .wrap-custom-checkbox {
+    margin-right: 15px;
+  }
+  .article_map {
+    min-height: 580px;
+  }
+  .article_map_content {
+    top: 50%;
+    left: 25%;
+    margin-top: -175px;
+    margin-left: -175px;
+  }
+  .footer_wrap {
+    width: 80%;
+    margin-left: 20%;
+  }
+}
+@media screen and (max-width: 1920px) {
+  .menu_btn {
+    right: 50px;
+    top: 50px;
+  }
+  .main_top {
+    margin: 45px 150px;
+  }
+  .menu_btn span::before {
+    top: -7px;
+  }
+  .menu_btn span::after {
+    bottom: -7px;
+  }
+  .menu {
+    background-color: #212121;
+    width: 20%;
+    padding: 50px;
+  }
+  .menu_logo {
+    margin-bottom: 70px;
+  }
+  .menu_navigation {
+    margin-bottom: 40px;
+  }
+  .menu_social {
+    margin-top: 70px;
+  }
+  .menu_navigation_list_link a {
+    font-size: calc(14px + 6 * (100vw / 1920));
+  }
+  .article_wrap {
+    padding: 0 15px;
+  }
+  .article_wrap_content {
+    flex-direction: row;
+  }
+  .article_wrap_content_imgs {
+    width: 50%;
+    text-align: right;
+  }
+  .article_wrap_content_imgs_group {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .article_wrap_content_description {
+    width: 50%;
+    padding-left: 20px;
+  }
+  .article_wrap_content_description p {
+    max-width: 600px;
+  }
+  //animations
+  .article-active .article_wrap_content_imgs {
+    margin-right: 0;
+  }
+  .article-active .article_wrap_content_imgs_group {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+  .content.content-active .main {
+    width: 80%;
+    margin-left: 20%;
+    transition: 0.5s;
+  }
+  .news.news-active {
+    width: 80%;
+    margin-left: 20%;
+    transition: 0.5s;
+  }
+  .article-active .article_wrap {
+    width: 80%;
+    margin-left: 20%;
+  }
+  .article-active .article_map {
+    width: 80%;
+    margin-left: 20%;
+  }
+  .article-active .article_reserve {
+    width: 80%;
+    margin-left: 20%;
+  }
+  .article-active .article_reserve_content_form {
+    transform: scale(0.8);
+    padding: 0 10px;
+  }
+  .article-active .article_wrap_content_description {
+    padding-left: 0;
+  }
+  //animation
+  .article_wrap_content_description {
+    padding-left: 35px;
+  }
+  .article_wrap_content_card {
+    margin: 0 15px 0 15px;
+    width: calc(302px + 100 * (100vw / 1920));
+  }
+  .article_wrap_content_card_icon {
+    top: 50%;
+    margin-top: -30px;
+  }
+  .wrapper-input {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .wrapper-input input {
+    margin-right: 8px;
+    font-size: 14px;
   }
   .wrapper-checkbox {
     margin-top: 35px;
@@ -219,6 +273,7 @@
   .wrapper-input input {
     width: 100%;
     margin-bottom: 8px;
+    font-size: 23px;
   }
   .wrapper-input button {
     margin-top: 108px;
@@ -252,11 +307,21 @@
     width: 20%;
     padding: 120px 35px 120px 35px;
   }
+  .menu_logo {
+    margin-bottom: 40px;
+  }
+  .menu_navigation {
+    margin-bottom: 40px;
+  }
+  .menu_social {
+    margin-top: 40px;
+  }
   .article_wrap {
     padding: 0 15px;
   }
   .article_wrap_content {
     flex-direction: column;
+    align-items: center;
   }
   .article_wrap_content_imgs {
     width: 100%;
@@ -276,7 +341,12 @@
     margin: 0;
   }
   .article_wrap_content_card {
-    width: 100%;
+    width: 70%;
+    height: 350px;
+  }
+  .article_wrap_content_card_icon {
+    top: 35%;
+    margin-top: -30px;
   }
   //animation
   //animation
@@ -290,7 +360,7 @@
   .menu {
     background-color: #212121;
     width: 22%;
-    padding: 40px 35px 40px 35px;
+    padding: 40px 20px 40px 35px;
   }
   .main_top {
     margin: 35px 35px;
@@ -344,6 +414,9 @@
   }
   .menu_logo {
     margin-bottom: 30px;
+  }
+  .menu_navigation {
+    margin-bottom: 20px;
   }
   .menu_navigation_list {
     text-align: center;

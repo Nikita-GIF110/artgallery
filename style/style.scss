@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 body {
   position: relative;
+  font-family: "Montserrat", sans-serif;
 }
 .title {
   position: relative;
@@ -370,11 +372,24 @@ body {
       }
       &_close {
         position: absolute;
-        top: 0;
+        top: 10px;
         right: 10px;
         z-index: 4;
-        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
         cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+          opacity: 0.5;
+          transition: 0.3s;
+        }
+        img:hover {
+          opacity: 1;
+        }
       }
     }
   }
@@ -404,7 +419,7 @@ body {
     transition: 0.5s;
     &_content {
       margin: 60px 0;
-      min-height: 500px;
+      min-height: 600px;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -424,6 +439,7 @@ body {
         flex-direction: column;
         justify-content: center;
         //width: 50%;
+        min-height: 540px;
         p {
           display: block;
           font-weight: 400;
@@ -436,7 +452,7 @@ body {
       //cards
       &_card {
         display: block;
-        min-height: 500px;
+        //min-height: 500px;
         position: relative;
         transition: 0.5s;
         box-sizing: border-box;
@@ -465,12 +481,10 @@ body {
         &_icon {
           position: absolute;
           z-index: 3;
-          top: 50%;
           left: 50%;
           width: 64px;
           height: 60px;
           margin-left: -32px;
-          margin-top: -30px;
           opacity: 1;
           transition: 0.3s;
         }
@@ -522,7 +536,7 @@ body {
   &_reserve {
     position: relative;
     min-height: 562px;
-    padding: 65px 0;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -552,28 +566,64 @@ body {
       position: relative;
       z-index: 4;
       &_form {
-        transition: 0.3s;
+        transition: 0.5s;
         //padding: 0 17px;
         position: relative;
         .wrapper-input {
           display: flex;
-          input {
-            padding: 15px 20px;
-            height: 75px;
-            outline: none;
-            background-color: transparent;
-            border: 2.5px solid #b89869;
-            box-sizing: border-box;
-            color: #fff;
+          .event {
+            width: 100%;
+            position: relative;
+            input {
+              position: relative;
+              padding: 15px 20px;
+              height: 75px;
+              outline: none;
+              background-color: transparent;
+              border: 2.5px solid #b89869;
+              box-sizing: border-box;
+              color: #fff;
+              transition: 0.3s;
+            }
+            input[date="date"] {
+              padding: 15px 10px 15px 45px;
+            }
+            input[date="time"] {
+              padding: 15px 10px 15px 45px;
+            }
+            input::-moz-placeholder {
+              color: #fff;
+            }
+            input::-webkit-input-placeholder {
+              color: #fff;
+            }
+            button {
+              padding: 25px;
+              background-color: #b89869;
+              text-transform: uppercase;
+              color: #fff;
+              height: 75px;
+              box-sizing: border-box;
+              width: 258px;
+            }
           }
-          button {
-            padding: 25px;
-            background-color: #b89869;
-            text-transform: uppercase;
-            color: #fff;
-            height: 75px;
-            box-sizing: border-box;
-            width: 258px;
+          .event[date="date"]::before,
+          .event[date="time"]::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 8px;
+            width: 32px;
+            height: 31px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
+          .event[date="date"]::before {
+            background-image: url("/img/icon/calendar.svg");
+          }
+          .event[date="time"]::before {
+            background-image: url("/img/icon/back-in-time.svg");
           }
         }
         //checkbox
@@ -592,7 +642,7 @@ body {
             align-items: center;
             position: relative;
             font-weight: normal;
-            font-size: 11px;
+            font-size: 17px;
             color: #fff;
             transition: all 0.33s ease-in-out;
             -webkit-transition: all 0.33s ease-in-out;
@@ -623,8 +673,12 @@ body {
             color: rgba(255, 255, 255, 0.4);
           }
           .wrap-custom-checkbox input:checked + label::before {
-            background: #b89869;
-            background-size: 90% 90%;
+            background-image: url("/img/icon/checkMark.svg");
+            top: 0;
+            left: 0;
+            background-position: -1px -3px;
+            background-repeat: no-repeat;
+            background-size: cover;
           }
           .wrap-custom-checkbox label:active::after {
             width: 1.77083vw;
@@ -652,6 +706,7 @@ body {
     transition: 0.5s;
     &_content {
       position: absolute;
+      z-index: 4;
       width: 350px;
       height: 350px;
       background-color: #fff;
@@ -664,21 +719,58 @@ body {
         font-weight: 400;
         margin-bottom: 30px;
       }
+      &_phone::before,
+      &_adress::before,
+      &_email::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -25px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 20px;
+        height: 20px;
+      }
+      &_phone::before {
+        background-image: url("/img/icon/phone.svg");
+      }
+      &_adress::before {
+        background-image: url("/img/icon/location.svg");
+      }
+      &_email::before {
+        background-image: url("/img/icon/email.svg");
+      }
       p {
         margin-left: 25px;
         color: #403a3a;
         font-size: 16px;
+        position: relative;
       }
       &_icon {
         margin-top: 50px;
-        a {
-          margin-right: 21px;
+        .social {
+          max-width: 32px;
+          max-height: 32px;
+          object-fit: cover;
         }
-        a:last-child {
-          margin-right: 0;
+        .social:first-child {
+          margin-right: 20px;
         }
       }
     }
+  }
+  &_map::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/mapImg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
 /*.article-active .article_wrap {
