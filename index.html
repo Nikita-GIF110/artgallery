@@ -93,7 +93,7 @@
       <div class="news">
         <h3 class="title">новости</h3>
         <div class="news_content">
-          <a href="#popup1" class="news_content_block" data-modal_btn="modal-1">
+          <a href="#" id="js-open-modal" class="news_content_block" data-parth="modal-1">
             <div class="news_content_block_img">
               <img src="img/news1.jpg" alt="">
               <p>описание новостей</p>
@@ -103,7 +103,7 @@
             <h3 class="news_content_block_title">подробнее</h3>
           </a>
           <!--news_content_block-->
-          <a href="#popup2" class="news_content_block" data-modal_btn="modal-2">
+          <a href="#" id="js-open-modal" class="news_content_block" data-parth="modal-2">
             <div class="news_content_block_img">
               <img src="img/news2.jpg" alt="">
               <p>описание новостей</p>
@@ -112,7 +112,7 @@
             <h3 class="news_content_block_title">подробнее</h3>
           </a>
           <!--news_content_block-->
-          <a href="#popup3" class="news_content_block" data-modal_btn="modal-3">
+          <a href="#" id="js-open-modal" class="news_content_block" data-parth="modal-3">
             <div class="news_content_block_img">
               <img src="img/news3.jpg" alt="">
               <p>описание новостей</p>
@@ -123,9 +123,9 @@
           <!--news_content_block-->
         </div>
         <!--news_content-->
-        <div class="news_modal" id="popup1" data-modal_window="modal-1">
+        <div class="news_modal" id="js-overlay-modal" data-target="modal-1">
           <div class="news_modal_window" id="myModal">
-            <div class="news_modal_window_close"><img src="img/icon/closeButton.svg" alt=""></div>
+            <div class="news_modal_window_close" id="js-modal-close"><img src="img/icon/closeButton.svg" alt=""></div>
             <div class="news_modal_window_img"><img src="img/news1.jpg" alt=""></div>
             <div class="news_modal_window_content">
               <h4>Lorem, ipsum dolor.</h4>
@@ -134,9 +134,9 @@
           </div>
         </div>
         <!--news_modal-->
-         <div class="news_modal" id="popup1" data-modal_window="modal-2">
+         <div class="news_modal" id="js-overlay-modal" data-target="modal-2">
           <div class="news_modal_window" id="myModal">
-            <div class="news_modal_window_close"><img src="img/icon/closeButton.svg" alt=""></div>
+            <div class="news_modal_window_close" id="js-modal-close"><img src="img/icon/closeButton.svg" alt=""></div>
             <div class="news_modal_window_img"><img src="img/news2.jpg" alt=""></div>
             <div class="news_modal_window_content">
               <h4>Lorem, ipsum dolor.</h4>
@@ -145,9 +145,9 @@
           </div>
         </div>
         <!--news_modal-->
-         <div class="news_modal" id="popup1" data-modal_window="modal-3">
+         <div class="news_modal" id="js-overlay-modal" data-target="modal-3">
           <div class="news_modal_window" id="myModal">
-            <div class="news_modal_window_close"><img src="img/icon/closeButton.svg" alt=""></div>
+            <div class="news_modal_window_close" id="js-modal-close"><img src="img/icon/closeButton.svg" alt=""></div>
             <div class="news_modal_window_img"><img src="img/news3.jpg" alt=""></div>
             <div class="news_modal_window_content">
               <h4>Lorem, ipsum dolor.</h4>
@@ -182,21 +182,21 @@
         <h3 class="title">Меню</h3>
         <!--title-->
         <div class="article_wrap_content">
-           <a href="#" class="article_wrap_content_card">
+           <a href="#" class="article_wrap_content_card" id="js-open-modal" data-parth="card-1">
             <p class="article_wrap_content_card_title">Основное меню</p>
             <img class="img" src="img/imgFood.jpg" alt="">
             <img class="article_wrap_content_card_icon" src="img/icon/serving-dish .svg" alt="">
             <p class="button">ПОДРОБНЕЕ</p>
            </a>
           <!--article_wrap_content_card-->
-          <a href="#" class="article_wrap_content_card">
+          <a href="#" class="article_wrap_content_card" id="js-open-modal" data-parth="card-2">
             <p class="article_wrap_content_card_title">Винная карта</p>
             <img class="img" src="img/imgWine.png" alt="">
             <img class="article_wrap_content_card_icon" src="img/icon/wine.svg" alt="">
             <p class="button">ПОДРОБНЕЕ</p>
           </a>
           <!--article_wrap_content_card-->
-          <a href="#" class="article_wrap_content_card">
+          <a href="#" class="article_wrap_content_card" id="js-open-modal" data-parth="card-3">
             <p class="article_wrap_content_card_title">Бар</p>
             <img class="img" src="img/imgCoctail.jpg" alt="">
             <img class="article_wrap_content_card_icon" src="img/icon/cocktail.svg" alt="">
@@ -240,7 +240,7 @@
             <!--wrapper-input-->
             <div class="wrapper-checkbox">
               <div class="wrap-custom-checkbox">
-                <input id="politic-checkbox" type="checkbox">
+                <input id="politic-checkbox" checked type="checkbox">
                 <label for="politic-checkbox">Согласен(сна) с политикой конфиденциальности</label>
                 </div>
               <div class="wrap-custom-checkbox">
@@ -297,14 +297,41 @@
         </nav>
         <!--footer_wrap_navigation-->
         <div class="footer_wrap_callback">
-          <h3 class="footer_wrap_callback_title">Обратная связь:</h3>-->
+          <h3 class="footer_wrap_callback_title">Обратная связь:</h3>
           <!--footer_callback_title-->
-          <a href="#" class="footer_wrap_callback_link">НАПИСАТЬ</a>-->
+          <button class="footer_wrap_callback_button" id="js-open-modal" data-parth="callBack">НАПИСАТЬ</button>
           <!--footer_wrap_callback_link-->
         </div>
         <!--footer_wrap_callback-->
       </div>
       <!--footer_wrap-->
+      <div class="footer_modal" id="js-overlay-modal" data-target="callBack">
+        <div class="footer_modal_content">
+          <div class="footer_modal_content_close" id="js-modal-close"><img src="img/icon/closeButton.svg" alt=""></div>
+          <h3 class="footer_modal_content_title">обратная связь с нами</h3>
+          <form action="#" id="form-callback" class="footer_modal_content_form">
+            <div class="footer_modal_content_form_item">
+              <input class="footer_modal_content_form_item_input" id="formName" type="text" name="userName" placeholder="Имя">
+            </div>
+            <div class="footer_modal_content_form_item">
+              <input class="footer_modal_content_form_item_input" id="formName" type="text" name="userName" placeholder="Фамилия">
+            </div>
+            <div class="footer_modal_content_form_item">
+              <input class="footer_modal_content_form_item_input" id="formPhone"  type="tel" name="userPhone" placeholder="Телефон">
+            </div>
+            <div class="footer_modal_content_form_item">
+              <input class="footer_modal_content_form_item_input" id="formEmail"  type="email" name="userEmail" placeholder="Email">
+            </div>
+             <div class="footer_modal_content_form_item" date="date">
+              <input class="footer_modal_content_form_item_input" id="formDate"  type="email" data- name="userDate" date="date" placeholder="Дата">
+            </div>  
+            <div class="footer_modal_content_form_item">
+              <textarea class="footer_modal_content_form_item_input" id="formMessage"  name="userMessage" placeholder="Сообщение"></textarea>
+            </div>
+            <button type="submit" class="footer_modal_content_form_button">отправить</button>
+          </form>
+        </div>
+      </div>
     </footer>
     <!--footer-->
 </body>

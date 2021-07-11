@@ -113,6 +113,9 @@
   .wrap-custom-checkbox {
     margin-right: 15px;
   }
+  .wrap-custom-checkbox label::before {
+    margin-right: 10px;
+  }
   .article_map {
     min-height: 580px;
   }
@@ -242,6 +245,9 @@
   .wrap-custom-checkbox {
     margin-right: 15px;
   }
+  .wrap-custom-checkbox label::before {
+    margin-right: 10px;
+  }
   .article_map {
     min-height: 580px;
   }
@@ -280,7 +286,7 @@
   }
   .wrapper-checkbox {
     position: absolute;
-    left: 17px;
+    left: 0px;
     bottom: 80px;
     flex-direction: column;
   }
@@ -434,6 +440,9 @@
   .menu_btn span::after {
     bottom: -5px;
   }
+  .wrap-custom-checkbox label::before {
+    margin-right: 10px;
+  }
   //aniamtion
   .content.content-active .main {
     width: 100%;
@@ -489,5 +498,8 @@
   }
   .article_wrap_content_card:last-child {
     margin: 0;
+  }
+  .article_reserve_content_form .wrapper-checkbox {
+    left: 2px;
   }
 }
