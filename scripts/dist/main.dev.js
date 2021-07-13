@@ -21,12 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
   var _loop = function _loop(i) {
     modalBtns[i].addEventListener('click', function (e) {
       var parth = modalBtns[i].getAttribute('data-parth');
+      console.log(modalBtns[i]);
       var modal = document.querySelector("[data-target=\"".concat(parth, "\"]"));
       modal.classList.add('show');
       e.preventDefault();
 
-      for (var _i2 = 0; _i2 < modalClose.length; _i2++) {
-        modalClose[_i2].addEventListener('click', function () {
+      for (var _i3 = 0; _i3 < modalClose.length; _i3++) {
+        modalClose[_i3].addEventListener('click', function () {
           modal.classList.remove('show');
         });
       }
@@ -47,5 +48,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
   for (var _i = 0; _i < modalOverlay.length; _i++) {
     _loop2(_i);
+  }
+
+  var links = document.querySelectorAll('.menu_navigation_list_link a[href*="#"]');
+
+  if (links.length > 0) {
+    for (var _i2 = 0; _i2 < links.length; _i2++) {
+      links[_i2].addEventListener('click', function (e) {
+        e.preventDefault();
+        var blockId = e.target.getAttribute('href').substr(1);
+        document.getElementById(blockId).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        btnBurger.classList.remove('menu_btn-active');
+        article.classList.remove('article-active');
+        content.classList.remove('content-active');
+        articleReserve.classList.remove('article_reserve-active');
+        news.classList.remove('news-active');
+      });
+    }
   }
 });

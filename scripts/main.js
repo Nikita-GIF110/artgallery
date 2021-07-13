@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
   for(let i = 0; i < modalBtns.length; i++) {
     modalBtns[i].addEventListener('click', function(e) {
       let parth = modalBtns[i].getAttribute('data-parth');
+      console.log(modalBtns[i]);
       let modal = document.querySelector(`[data-target="${parth}"]`);
       modal.classList.add('show');
       e.preventDefault();
@@ -40,6 +41,26 @@ document.addEventListener('DOMContentLoaded', function() {
         modalOverlay[i].classList.remove('show');        
       }
     })
+  }
+  
+  const links = document.querySelectorAll('.menu_navigation_list_link a[href*="#"]');
+  
+  if(links.length > 0) {
+    for(let i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        const blockId = e.target.getAttribute('href').substr(1);
+        document.getElementById(blockId).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        })
+        btnBurger.classList.remove('menu_btn-active');
+        article.classList.remove('article-active');
+        content.classList.remove('content-active');  
+        articleReserve.classList.remove('article_reserve-active');
+        news.classList.remove('news-active');
+      })
+    }
   }
   
 });

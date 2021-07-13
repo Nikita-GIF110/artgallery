@@ -68,6 +68,9 @@
     margin-left: 20%;
     transition: 0.5s;
   }
+  .slider-item p {
+    display: block;
+  }
   .article-active .article_wrap {
     width: 80%;
     margin-left: 20%;
@@ -128,6 +131,21 @@
   .footer_wrap {
     width: 80%;
     margin-left: 20%;
+  }
+  .footer_modal_content {
+    width: 50%;
+  }
+  .footer_modal_content {
+    width: 50%;
+    padding: 40px;
+  }
+  .footer_modal_content_form {
+    margin: 0 auto;
+    max-width: 80%;
+  }
+  .footer_modal_content_form_item {
+    width: 50%;
+    margin: 20px auto;
   }
 }
 @media screen and (max-width: 1920px) {
@@ -227,6 +245,12 @@
     margin: 0 15px 0 15px;
     width: calc(302px + 100 * (100vw / 1920));
   }
+  .article_wrap_content_modal_window {
+    padding: 0px;
+  }
+  .article_wrap_content_modal_window_content {
+    height: 750px;
+  }
   .article_wrap_content_card_icon {
     top: 50%;
     margin-top: -30px;
@@ -260,6 +284,18 @@
   .footer_wrap {
     width: 80%;
     margin-left: 20%;
+  }
+  .footer_modal_content {
+    width: 50%;
+    padding: 40px;
+  }
+  .footer_modal_content_form {
+    margin: 0 auto;
+    max-width: 80%;
+  }
+  .footer_modal_content_form_item {
+    width: 50%;
+    margin: 20px auto;
   }
 }
 
@@ -350,9 +386,23 @@
     width: 70%;
     height: 350px;
   }
+  .article_wrap_content_modal_window {
+    padding: 20px;
+  }
+  .article_wrap_content_modal_window_content {
+    height: 400px;
+  }
   .article_wrap_content_card_icon {
     top: 35%;
     margin-top: -30px;
+  }
+  .footer_modal_content {
+    width: 50%;
+    padding: 15px;
+  }
+  .footer_modal_content_form_item {
+    width: 50%;
+    margin: 8px auto;
   }
   //animation
   //animation
@@ -401,7 +451,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 30px;
+    bottom: 50px;
   }
   //animation
   //animation
@@ -443,6 +493,9 @@
   .wrap-custom-checkbox label::before {
     margin-right: 10px;
   }
+  .slider-item p {
+    display: none;
+  }
   //aniamtion
   .content.content-active .main {
     width: 100%;
@@ -473,6 +526,18 @@
     margin-left: 0%;
   }
   //animatio
+  .footer_modal_content {
+    width: 80%;
+    padding: 10px 20px;
+  }
+  .footer_modal_content_form {
+    max-width: 100%;
+    margin: 0;
+  }
+  .footer_modal_content_form_item {
+    width: 100%;
+    margin-bottom: 8px;
+  }
 }
 
 @media screen and (max-width: 768px) {
