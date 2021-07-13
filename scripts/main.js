@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
   for(let i = 0; i < modalBtns.length; i++) {
     modalBtns[i].addEventListener('click', function(e) {
       let parth = modalBtns[i].getAttribute('data-parth');
-      console.log(modalBtns[i]);
       let modal = document.querySelector(`[data-target="${parth}"]`);
       modal.classList.add('show');
       e.preventDefault();
@@ -62,7 +61,15 @@ document.addEventListener('DOMContentLoaded', function() {
       })
     }
   }
+
+  let mask = document.querySelector('.mask');
   
+  window.addEventListener('load', () => {
+    mask.classList.add('hide')
+    setTimeout(() =>{
+      mask.remove();
+    }, 600)
+  });
 });
 
 

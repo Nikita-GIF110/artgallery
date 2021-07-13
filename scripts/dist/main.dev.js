@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var _loop = function _loop(i) {
     modalBtns[i].addEventListener('click', function (e) {
       var parth = modalBtns[i].getAttribute('data-parth');
-      console.log(modalBtns[i]);
       var modal = document.querySelector("[data-target=\"".concat(parth, "\"]"));
       modal.classList.add('show');
       e.preventDefault();
@@ -69,4 +68,12 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   }
+
+  var mask = document.querySelector('.mask');
+  window.addEventListener('load', function () {
+    mask.classList.add('hide');
+    setTimeout(function () {
+      mask.remove();
+    }, 600);
+  });
 });

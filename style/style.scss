@@ -3,6 +3,49 @@ body {
   position: relative;
   font-family: "Montserrat", sans-serif;
 }
+.mask {
+  background-color: #212121;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  opacity: 1;
+  visibility: visible;
+  .loader {
+    border: 10px solid #c2a06e;
+    border-left-color: #706d67;
+    padding: 10px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: loader 5s linear infinite;
+  }
+  img {
+    position: absolute;
+    top: 50%;
+    margin-top: -26px;
+    left: 50%;
+    margin-left: -41px;
+    width: 82px;
+    height: 52px;
+  }
+  @keyframes loader {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+.mask.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+//mask
 .title {
   position: relative;
   z-index: 4;
@@ -31,7 +74,7 @@ body {
   overflow: hidden;
   width: 60%;
   height: 350px;
-  position: relative;
+  //position: relative;
   .slider-track {
     display: flex;
     transition: 0.5s;
@@ -52,7 +95,6 @@ body {
       p {
         position: relative;
         top: 50%;
-        //display: block;
         text-align: center;
         z-index: -6;
         color: #fff;
@@ -83,21 +125,28 @@ body {
       transform: scale(1);
     }
   }
+}
+.slider-button {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .prev,
   .next {
-    position: absolute;
+    //position: absolute;
     z-index: 5;
-    top: 50%;
-    margin-top: -20px;
+    top: 18%;
+    //margin-top: -20px;
     background-color: transparent;
     border: none;
     cursor: pointer;
   }
   .prev {
-    left: 0;
+    left: 17%;
   }
   .next {
-    right: 0;
+    right: 17%;
   }
 }
 
@@ -427,11 +476,8 @@ body {
       transition: 0.5s;
       position: relative;
       &_imgs {
-        //width: 50%;
         transition: 0.3s;
         &_group {
-          //width: 100%;
-          //height: 100%;
           object-fit: cover;
           transition: 0.3s;
         }
@@ -440,8 +486,6 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        //width: 50%;
-        min-height: 540px;
         p {
           display: block;
           font-weight: 400;
@@ -734,7 +778,7 @@ body {
             color: rgba(255, 255, 255, 0.4);
           }
           .wrap-custom-checkbox input:checked + label::before {
-            background-image: url("/./img/icon/checkMark.svg");
+            background-image: url("../../img/icon/checkMark.svg");
             top: 0;
             left: 0;
             background-position: -1px -3px;
@@ -823,7 +867,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/img/mapImg.png");
+    background-image: url("../../img/mapImg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -922,7 +966,6 @@ body {
       top: -120%;
       left: 50%;
       transform: translate(-50%, -50%);
-      //padding: 40px;
       box-sizing: border-box;
       transition: 0.5s;
       &_title {
@@ -953,10 +996,17 @@ body {
         opacity: 1;
       }
       &_form {
-        //max-width: 80%;
-        //margin: 0 auto;
         &_item {
           position: relative;
+          img {
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            left: 8px;
+            width: 32px;
+            height: 30px;
+            object-fit: cover;
+          }
           &_input {
             width: 100%;
             padding: 15px 20px;
@@ -978,19 +1028,6 @@ body {
             resize: vertical;
             max-height: 150px;
           }
-        }
-        &_item[date="date"]::before {
-          content: "";
-          position: absolute;
-          top: 50%;
-          margin-top: -15px;
-          left: 8px;
-          width: 32px;
-          height: 30px;
-          background-image: url("/./img/icon/calendar.svg");
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: cover;
         }
         &_button {
           outline: none;

@@ -4,6 +4,50 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.mask {
+  background-color: #212121;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  opacity: 1;
+  visibility: visible;
+}
+.mask .loader {
+  border: 10px solid #c2a06e;
+  border-left-color: #706d67;
+  padding: 10px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: loader 5s linear infinite;
+}
+.mask img {
+  position: absolute;
+  top: 50%;
+  margin-top: -26px;
+  left: 50%;
+  margin-left: -41px;
+  width: 82px;
+  height: 52px;
+}
+@keyframes loader {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.mask.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .title {
   position: relative;
   z-index: 4;
@@ -34,7 +78,6 @@ body {
   overflow: hidden;
   width: 60%;
   height: 350px;
-  position: relative;
 }
 .slider-container .slider-track {
   display: flex;
@@ -86,21 +129,27 @@ body {
   z-index: 6;
   transform: scale(1);
 }
-.slider-container .prev,
-.slider-container .next {
-  position: absolute;
+
+.slider-button {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-button .prev,
+.slider-button .next {
   z-index: 5;
-  top: 50%;
-  margin-top: -20px;
+  top: 18%;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-.slider-container .prev {
-  left: 0;
+.slider-button .prev {
+  left: 17%;
 }
-.slider-container .next {
-  right: 0;
+.slider-button .next {
+  right: 17%;
 }
 
 .menu_btn {
@@ -426,7 +475,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 540px;
 }
 .article_wrap_content_description p {
   display: block;
@@ -717,7 +765,7 @@ body {
   color: rgba(255, 255, 255, 0.4);
 }
 .article_reserve_content_form .wrapper-checkbox .wrap-custom-checkbox input:checked + label::before {
-  background-image: url("/./img/icon/checkMark.svg");
+  background-image: url("../../img/icon/checkMark.svg");
   top: 0;
   left: 0;
   background-position: -1px -3px;
@@ -799,7 +847,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/img/mapImg.png");
+  background-image: url("../../img/mapImg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -927,6 +975,15 @@ body {
 .footer .footer_modal_content_form_item {
   position: relative;
 }
+.footer .footer_modal_content_form_item img {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  left: 8px;
+  width: 32px;
+  height: 30px;
+  object-fit: cover;
+}
 .footer .footer_modal_content_form_item_input {
   width: 100%;
   padding: 15px 20px;
@@ -947,19 +1004,6 @@ body {
 .footer .footer_modal_content_form_item textarea {
   resize: vertical;
   max-height: 150px;
-}
-.footer .footer_modal_content_form_item[date=date]::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-top: -15px;
-  left: 8px;
-  width: 32px;
-  height: 30px;
-  background-image: url("/./img/icon/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 .footer .footer_modal_content_form_button {
   outline: none;

@@ -196,6 +196,7 @@
   .article_wrap_content_description {
     width: 50%;
     padding-left: 20px;
+    min-height: 540px;
   }
   .article_wrap_content_description p {
     max-width: 600px;
@@ -372,6 +373,7 @@
   .article_wrap_content_description {
     width: 100%;
     padding-left: 0;
+    min-height: 200px;
   }
   .article_wrap_content_description p {
     max-width: 100%;
